@@ -1,5 +1,5 @@
 
-tabs = ['research', 'team', 'papers', 'resources']
+tabs = ['research', 'team', 'papers', 'press', 'resources']
 
 // Prevent unloaded fonts from flashing
 waitForFonts = 0;
@@ -17,13 +17,20 @@ $(document).ready(function() {
     $('body').addClass("fonts-ready")
   }
 
-  // var includes = $('[data-include]');
-  // jQuery.each(includes, function(){
-  //   var file = 'includes/' + $(this).data('include') + '.html';
-  //   var callback = ($(this).data('include') == 'header') ? headerFunctions : ""
-  //   $(this).load(file,callback);
-  // });
+  var includes = $('[data-include]');
+  jQuery.each(includes, function(){
+    var file = 'includes/' + $(this).data('include') + '.html';
+    var callback = ""
+    if ($(this).data('include') == 'header') {
+      callback = headerFunctions;
+    } else if ($(this).data('include') == 'footer') {
+      callback = footerFunctions;
+    }
+    $(this).load(file,callback);
+  });
+});
 
+function headerFunctions() {
   // Show current page's sub nav
   currentPage = location.pathname.substr(location.pathname.lastIndexOf("/")+1)
   if (currentPage.includes(".")) {
@@ -35,8 +42,6 @@ $(document).ready(function() {
   }
 
   // On hover, show sub nav
-  console.log("Test");
-  console.log($('.main-nav > li').length);
   $('.main-nav > li').hover(function() {
     name = this.attributes.data.value;
 
@@ -60,5 +65,10 @@ $(document).ready(function() {
         $('.site-nav .sub-nav.'+item).animate({marginTop:"-75px"}, 100);
       }
     });
-  })
-});
+  });
+}
+
+function footerFunctions() {
+  console.log($('footer.site-footer .email').length)
+  $('footer.site-footer .copyright').html("&copy; "+new Date().getFullYear());
+}

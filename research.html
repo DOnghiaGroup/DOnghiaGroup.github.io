@@ -19,33 +19,9 @@
 
   <body>
 
-    <header class="site-header">
-      <div class="wrapper">
-        <a class="site-title" href="index"><div>UW Astro Dynamics Group</div></a>
-        <nav class="site-nav">
-          <ul class="main-nav">
-            <li data="research"><a href="research">research</a></li>
-            <li data="team"><a href="team">team</a></li>
-            <li data="papers"><a href="papers">papers</a></li>
-            <li data="resources"><a href="resources">resources</a></li>
-          </ul>
-          <ul class="sub-nav research">
-            <li><a href="research#mw-disk">MW Disk</a></li>
-            <li><a href="research#magellanic">Magellanic Stream</a></li>
-            <li><a href="research#gaia">Gaia</a></li>
-          </ul>
-          <ul class="sub-nav team">
-            <li><a href="team#elena">Elena</a></li>
-            <li><a href="team#chad">Chad</a></li>
-            <li><a href="team#scott">Scott</a></li>
-            <li><a href="team#cameron">Cameron</a></li>
-            <li><a href="team#calvin">Calvin</a></li>
-            <li><a href="team#emil">Emil</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <div class="page-container">
 
+    <header class="site-header" data-include="header"><!-- --></header>
 
     <div class="page-content">
       <div class="wrapper research">
@@ -76,36 +52,13 @@
             <img src="images/LMC_SMC.png"/>
           </div>
         </div>
+        <div class="section" id="end"><!-- --></div>
       </div>
     </div>
 
-    <footer class="site-footer">
+    <footer class="site-footer" data-include="footer"><!-- --></footer>
 
-      <div class="wrapper">
-
-        <!-- <h2 class="footer-heading">Wisc Astro Dynamics Group</h2> -->
-
-        <!-- <div class="footer-col-wrapper">
-          <div class="footer-col footer-col-1">
-            <ul class="contact-list">
-              <li>{{ site.title }}</li>
-              <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col footer-col-2">
-            <ul class="social-media-list">
-              <li>
-                <a href="https://github.com/"><span class="icon icon-github"></span><span class="username">Test</span></a>
-              </li>
-            </ul>
-          </div>
-
-        </div> -->
-
-      </div>
-
-    </footer>
+    </div>
 
   </body>
 
