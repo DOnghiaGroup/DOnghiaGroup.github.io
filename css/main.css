@@ -150,7 +150,7 @@ nav.site-nav ul.sub-nav {
 }
 
 nav.site-nav ul.sub-nav > li {
-  padding: 0px 5px;
+  padding: 0px 0px;
 }
 
 nav.site-nav ul.sub-nav:after {
@@ -259,11 +259,6 @@ footer.site-footer a:hover:before {
   nav.site-nav ul.main-nav {
     padding: 40px calc(calc(100% - 640px) / 2);
   }
-  nav.site-nav ul.sub-nav {
-    margin: -75px calc(calc(100% - 700px) / 2);
-    padding: 15px 30px;
-    width: 640px;
-  }
 
   /* Page Content */
 
@@ -295,6 +290,14 @@ footer.site-footer a:hover:before {
   }
   .page-content .wrapper.team .section .image {
     width: 25%
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  nav.site-nav ul.sub-nav {
+      margin: -75px calc(calc(100% - 825px) / 2);
+      padding: 15px 30px;
+      width: 765px;
   }
 }
 

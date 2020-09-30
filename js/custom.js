@@ -47,7 +47,7 @@ function headerFunctions() {
 
     // Hide other sub navs
     tabs.forEach((item, i) => {
-      if (item != name && item != currentPage) {
+      if (item != name) {
         $('.site-nav .sub-nav.'+item).css("margin-top", "-75px");
       }
     });
@@ -60,6 +60,7 @@ function headerFunctions() {
   $('.site-nav').hover(function() {
 
   }, function() {
+    $('.site-nav .sub-nav.'+currentPage).css("margin-top", "0");
     tabs.forEach((item, i) => {
       if (item != currentPage) {
         $('.site-nav .sub-nav.'+item).animate({marginTop:"-75px"}, 100);
