@@ -1,19 +1,20 @@
 
 tabs = ['research', 'team', 'papers', 'press', 'resources']
 
-// Prevent unloaded fonts from flashing
-waitForFonts = 0;
+waitForFonts = 1;
+loaded = 0;
 if (waitForFonts) {
   var fontA = new FontFaceObserver('Raleway');
   var fontB = new FontFaceObserver('Open Sans');
   Promise.all([fontA.load(), fontB.load()]).then(function () {
-    $('body').addClass("fonts-ready")
+    loaded = 1;
+    $('body').addClass("fonts-ready");
   });
 }
 
 $(document).ready(function() {
 
-  if (!waitForFonts) {
+  if (!waitForFonts  || loaded) {
     $('body').addClass("fonts-ready")
   }
 
@@ -70,6 +71,5 @@ function headerFunctions() {
 }
 
 function footerFunctions() {
-  console.log($('footer.site-footer .email').length)
   $('footer.site-footer .copyright').html("&copy; "+new Date().getFullYear());
 }
