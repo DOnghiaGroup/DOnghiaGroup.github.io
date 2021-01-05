@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway&display=swap');
 
 body {
   margin: 0;
@@ -69,7 +69,7 @@ header.site-header {
   font-size: 2.5em;
   text-align: center;
   display: block;
-  padding: 200px 0;
+  padding: 177px 0;
   background-image: url(../images/nature_cover.jpg);
   background-size: cover;
   background-position: 50% 0;
@@ -84,6 +84,13 @@ a.site-title:before {
   padding-bottom: 7px;
   background-color: rgba(255,255,255,0.4);
   border: 2px solid #333;
+}
+
+.site-header .image-citation {
+  position: absolute;
+  margin-top: -14px;
+  right: 3px;
+  font-size: 0.7em;
 }
 
 /* Nav */
@@ -160,6 +167,7 @@ nav.site-nav ul.sub-nav {
 
   position: absolute;
   top: 556px;
+  /* top: 605px; */
   z-index: -10;
 
   -webkit-transition: all 0.3s ease-in-out 0s;
@@ -224,6 +232,10 @@ footer.site-footer .copyright {
   padding-bottom: 80px;
 }
 
+.page-content a {
+  font-weight: 400;
+}
+
 .page-content .section {
   padding-top: 20px;
 }
@@ -239,6 +251,33 @@ footer.site-footer .copyright {
   width: 100%;
 }
 
+.page-content .wrapper .grants {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.page-content .wrapper .grants img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 17%;
+  max-height: 50px;
+  padding: 0 5px;
+}
+
+/** Research **/
+.page-content .research-sub img {
+  max-width: 20%;
+}
+
+.page-content .research h2 {
+  font-weight: 600;
+}
+
+.page-content .research a {
+  font-weight: 600;
+}
+
+/** Team **/
 .page-content .team .section h2 {
   margin-block-start: 0;
   margin-block-end: 0;
@@ -249,29 +288,89 @@ footer.site-footer .copyright {
   max-width: 275px;
 }
 
-.page-content .paper {
-  padding: 15px 0;
+.page-content .team .section#former h2 {
+  /* text-align: center;
+  text-decoration: underline; */
 }
 
-.page-content a {
-  font-weight: 400;
+.page-content .team .section#former > div {
+  display: block;
+  margin: 20px 0;
+  /* background-color: gray; */
+  padding: 15px;
+}
+
+.page-content .team .section#former .title {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.page-content .team .section#former .student-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.page-content .team .section#former .student {
+  /* display: inline-block; */
+  width: 18%;
+  padding: 5px;
+  text-align: center;
+  vertical-align: top;
+  border: 1px solid #333;
+  background-color: #eee;
+  color: #333;
+  border-radius: 15px;
+}
+
+.page-content .team .section#former .student .name {
+  font-size: 1.1em;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+/** Publications **/
+.page-content .papers .paper a {
+  color: blue;
+}
+
+.page-content .papers .paper a:before {
+  background-color: blue;
+}
+
+.page-content .paper {
+  padding: 15px 0;
 }
 
 /** Press Releases **/
 .page-content .press .release {
   clear: both;
+  padding: 15px 0;
 }
 
 .page-content .press .release img {
   float: left;
   max-width: 30%;
+  padding-right: 10px;
 }
 
 .page-content .press .release a {
-  float: right;
-  font-size: 2.0em;
-  max-width: 70%;
+  /* float: right; */
+  /* max-width: calc(70% - 10px); */
+  font-size: 1.8em;
+  display: block;
+
+  -moz-transition: color .2s ease-in;
+  -o-transition: color .2s ease-in;
+  -webkit-transition: color .2s ease-in;
+  transition: color .2s ease-in;
 }
+.page-content .press .release a:before {
+  height: 0px;
+}
+.page-content .press .release a:hover {
+  color: grey;
+}
+
 
 .page-content .press .release div {
   /* clear: right;
@@ -281,6 +380,63 @@ footer.site-footer .copyright {
 
 .page-content .press .release div:first-of-type::after {
   content: " | ";
+}
+
+/** Resources **/
+/* .page-content .resources .section#code .githubrepos {
+  padding-left: 20px;
+} */
+
+.page-content .resources .githubrepos {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-flow: row wrap;
+}
+
+.page-content .resources .githubrepos .githubrepo {
+  /* flex-grow: 1; */
+  /* flex-basis: 0; */
+  padding: 10px 10px 60px 10px;
+  margin: 5px;
+  width: 60%;
+
+  border: 2px solid #333;
+  border-radius: 15px;
+  position: relative;
+}
+
+.page-content .resources .githubrepo .repo-title {
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 1.2em;
+}
+.page-content .resources .githubrepo .repo-title a {
+  font-weight: 600;
+}
+
+.page-content .resources .githubrepo .repo-desc {
+  text-align: justify;
+}
+
+.page-content .resources .githubrepo .repo-cite {
+  padding-top: 10px;
+  font-size: 0.8em;
+  position: absolute;
+  bottom: 7px;
+  width: calc(100% - 20px);
+}
+
+.announcements {
+  text-align: center;
+}
+
+.positions-available {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid #333;
+  margin-bottom: 10px;
 }
 
 /******************/
@@ -312,6 +468,12 @@ footer.site-footer .copyright {
   .page-content {
     padding-top: 75px;
   }
+
+  .page-content .wrapper .grants img {
+    max-width: 15%;
+    max-height: 65px;
+    padding: 0 10px;
+  }
 }
 
 @media only screen and (min-width: 750px) {
@@ -327,11 +489,12 @@ footer.site-footer .copyright {
 
   .page-content .section .text {
     text-align: justify;
-    width: 55%;
+    width: calc(55% - 20px);
   }
 
   .page-content .section .image {
     width: 45%;
+    padding: 0 10px;
   }
   .page-content .team .section .image img {
     width: 100%;
@@ -349,11 +512,21 @@ footer.site-footer .copyright {
   }
 
   .page-content .wrapper.team .section .text {
-    width: 75%;
+    width: calc(75% - 20px);
   }
   .page-content .wrapper.team .section .image {
     width: 25%
   }
+
+  .page-content .wrapper .grants img {
+    max-width: 15%;
+    max-height: 85px;
+    padding: 0 15px;
+  }
+
+  /* .page-content .resources .section#code .githubrepos {
+    padding-left: 50px;
+  } */
 }
 
 @media only screen and (min-width: 900px) {
@@ -362,6 +535,21 @@ footer.site-footer .copyright {
       padding: 15px 30px;
       width: 765px;
   }
+
+  .page-content .wrapper .grants img {
+    max-width: 15%;
+    max-height: 85px;
+    padding: 0 25px;
+  }
+
+  .page-content .resources .githubrepos .githubrepo {
+    padding: 10px 20px 60px 20px;
+    width: 35%;
+  }
+  .page-content .resources .githubrepo .repo-cite {
+    width: calc(100% - 40px);
+  }
+
 }
 
 @media only screen and (min-width: 1100px) {
@@ -374,5 +562,15 @@ footer.site-footer .copyright {
     margin: -75px calc(calc(100% - 1000px) / 2);
     padding: 15px 30px;
     width: 940px;
+  }
+
+  .page-content .wrapper .grants img {
+    max-width: 15%;
+    max-height: 100px;
+    padding: 0 30px;
+  }
+
+  .page-content .resources .githubrepos .githubrepo {
+    width: 25%;
   }
 }

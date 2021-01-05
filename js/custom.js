@@ -18,6 +18,10 @@ $(document).ready(function() {
     $('body').addClass("fonts-ready")
   }
 
+  // if ($('.page-content .wrapper.resources').length > 0) {
+  //   loadGitHubRepos()
+  // }
+
   var includes = $('[data-include]');
   jQuery.each(includes, function(){
     var file = 'includes/' + $(this).data('include') + '.html';
@@ -61,7 +65,9 @@ function headerFunctions() {
   $('.site-nav').hover(function() {
 
   }, function() {
-    $('.site-nav .sub-nav.'+currentPage).css("margin-top", "0");
+    if (currentPage != "") {
+      $('.site-nav .sub-nav.'+currentPage).css("margin-top", "0");
+    }
     tabs.forEach((item, i) => {
       if (item != currentPage) {
         $('.site-nav .sub-nav.'+item).animate({marginTop:"-75px"}, 100);
@@ -73,3 +79,22 @@ function headerFunctions() {
 function footerFunctions() {
   $('footer.site-footer .copyright').html("&copy; "+new Date().getFullYear());
 }
+
+// function loadGitHubRepos() {
+//
+//   const xhr = new XMLHttpRequest();
+//   const url = 'https://api.github.com/users/DOnghiaGroup/repos';
+//   xhr.open('GET', url, true);
+//   xhr.onload = function() {
+//       const data = JSON.parse(this.response);
+//       console.log(data);
+//       for (i in data) {
+//         item = data[i]
+//         newHtmlElement = "<p class=\"githubrepo\"><a href=\""+item.html_url+"\">"+item.name+"</a> - "+item.description+"</p>"
+//         $('.page-content .resources #code .githubrepos').append(newHtmlElement)
+//       }
+//   }
+//
+//   // Send the request to the server
+//   xhr.send();
+// }
