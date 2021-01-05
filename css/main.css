@@ -330,11 +330,11 @@ footer.site-footer .copyright {
 
 /** Publications **/
 .page-content .papers .paper a {
-  color: blue;
+  color: #68548A;
 }
 
 .page-content .papers .paper a:before {
-  background-color: blue;
+  background-color: #68548A;
 }
 
 .page-content .paper {
@@ -413,6 +413,10 @@ footer.site-footer .copyright {
 }
 .page-content .resources .githubrepo .repo-title a {
   font-weight: 600;
+  color: #68548A;
+}
+.page-content .resources .githubrepo .repo-title a:before {
+  background-color: #68548A;
 }
 
 .page-content .resources .githubrepo .repo-desc {
