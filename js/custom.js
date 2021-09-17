@@ -14,6 +14,7 @@ if (waitForFonts) {
 
 $(document).ready(function() {
 
+  // don't load the page until the fonts are ready
   if (!waitForFonts  || loaded) {
     $('body').addClass("fonts-ready")
   }
@@ -22,6 +23,7 @@ $(document).ready(function() {
   //   loadGitHubRepos()
   // }
 
+  // Import header and footer from external files
   var includes = $('[data-include]');
   jQuery.each(includes, function(){
     var file = 'includes/' + $(this).data('include') + '.html';
@@ -33,14 +35,33 @@ $(document).ready(function() {
     }
     $(this).load(file,callback);
   });
+
+  // set video size on resources page
+  // currentPage = getCurrentPage()
+  // if (currentPage == "resources") {
+  //   setTimeout(function() {
+  //     play_overlays = $('div.movies .movie .thumb .play-button')
+  //     thumb_width = $('div.movies .movie .thumb .screenshot').width()
+  //     thumb_height = $('div.movies .movie .thumb .screenshot').height()
+  //     play_overlays.each(function() {
+  //       $(this).css('left',thumb_width/2-75+'px')
+  //       $(this).css('top',17-thumb_height/2-75+'px')
+  //     })
+  //   },200)
+  // }
 });
 
-function headerFunctions() {
-  // Show current page's sub nav
+function getCurrentPage() {
   currentPage = location.pathname.substr(location.pathname.lastIndexOf("/")+1)
   if (currentPage.includes(".")) {
     currentPage = currentPage.substr(0,currentPage.indexOf("."))
   }
+  return currentPage
+}
+
+function headerFunctions() {
+  // Show current page's sub nav
+  currentPage = getCurrentPage()
   if (currentPage != "") {
     $('.site-nav .sub-nav.'+currentPage).css("margin-top", "0")
     $('.site-nav .sub-nav.'+currentPage).css("z-index", "-11")
