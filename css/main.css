@@ -178,6 +178,10 @@ nav.site-nav ul.sub-nav > li {
   padding: 0px 0px;
 }
 
+nav.site-nav ul.sub-nav.team > li {
+  padding: 0px 10px;
+}
+
 nav.site-nav ul.sub-nav:after {
   content: '';
   display: inline-block;
@@ -587,6 +591,10 @@ footer.site-footer .copyright {
       margin: -75px calc(calc(100% - 825px) / 2);
       padding: 15px 30px;
       width: 765px;
+  }
+
+  nav.site-nav ul.sub-nav.team > li {
+    padding: 0px 0px;
   }
 
   .page-content .wrapper .grants img {
