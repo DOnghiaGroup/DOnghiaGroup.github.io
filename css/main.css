@@ -312,11 +312,12 @@ footer.site-footer .copyright {
 .page-content .team .section#former .student-container {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .page-content .team .section#former .student {
   /* display: inline-block; */
-  width: 18%;
+  width: 40%;
   padding: 5px;
   text-align: center;
   vertical-align: top;
@@ -324,12 +325,28 @@ footer.site-footer .copyright {
   background-color: #eee;
   color: #333;
   border-radius: 15px;
+  margin-bottom: 15px;
 }
 
 .page-content .team .section#former .student .name {
   font-size: 1.1em;
   font-weight: bold;
   padding-bottom: 10px;
+}
+
+.page-content .photo, .page-content .photo-small {
+  text-align: center;
+  padding: 10px 0;
+}
+.page-content .photo img {
+  width: 100%;
+  /* border: 5px solid black; */
+  border-radius: 10px;
+}
+.page-content .photo-small img {
+  width: 80%;
+  /* border: 5px solid black; */
+  border-radius: 50%;
 }
 
 /** Publications **/
@@ -553,6 +570,14 @@ footer.site-footer .copyright {
     margin: 0;
   }
 
+  .page-content .photo-small img {
+    width: 50%;
+  }
+
+  .page-content .team .section#former .student {
+    width: 27%;
+  }
+
   .page-content .section:nth-of-type(even) .text,
   .page-content .section:nth-of-type(odd) .image {
     float: left;
@@ -597,10 +622,18 @@ footer.site-footer .copyright {
     padding: 0px 0px;
   }
 
+  .page-content .photo img {
+    width: 70%;
+  }
+
   .page-content .wrapper .grants img {
     max-width: 15%;
     max-height: 85px;
     padding: 0 25px;
+  }
+
+  .page-content .team .section#former .student {
+    width: 20%;
   }
 
   .page-content .resources .githubrepos .githubrepo {
@@ -629,6 +662,14 @@ footer.site-footer .copyright {
     max-width: 15%;
     max-height: 100px;
     padding: 0 30px;
+  }
+
+  .page-content .photo-small img {
+    width: 35%;
+  }
+
+  .page-content .team .section#former .student {
+    width: 18%;
   }
 
   .page-content .resources .githubrepos .githubrepo {
