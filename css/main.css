@@ -66,7 +66,7 @@ header.site-header {
   font-variant: small-caps;
   color: black;
   text-decoration: none;
-  font-size: 2.5em;
+  font-size: 1em;
   text-align: center;
   display: block;
   padding: 177px 0;
@@ -81,9 +81,15 @@ a.site-title:before {
 
 .site-title>div {
   margin: 0 30px;
-  padding-bottom: 7px;
+  /* padding-bottom: 7px; */
   background-color: rgba(255,255,255,0.4);
   border: 2px solid #333;
+}
+
+.site-title img {
+  width: calc(100% - 40px);
+  padding: 20px;
+  padding-bottom: 5px;
 }
 
 .site-header .image-citation {
@@ -515,6 +521,7 @@ footer.site-footer .copyright {
 @media only screen and (min-width: 550px) {
   .site-title {
     background-position: 0 25%;
+    font-size: 1.5em;
   }
   .site-title>div {
     margin: 0 calc(50% - 260px);
@@ -670,6 +677,8 @@ footer.site-footer .copyright {
 
   .page-content .team .section#former .student {
     width: 18%;
+    margin: 0 10px;
+    margin-bottom: 15px;
   }
 
   .page-content .resources .githubrepos .githubrepo {
