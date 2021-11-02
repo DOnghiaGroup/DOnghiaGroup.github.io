@@ -69,7 +69,8 @@ header.site-header {
   font-size: 1em;
   text-align: center;
   display: block;
-  padding: 177px 0;
+  /* padding: 177px 0; */
+  padding: 125px 0;
   background-image: url(../images/nature_cover_smaller.jpg);
   background-size: cover;
   background-position: 50% 0;
@@ -177,7 +178,8 @@ nav.site-nav ul.sub-nav {
 
   position: absolute;
   /* top: 556px; */
-  top: 678px;
+  /* top: 678px; */
+  top: 574px;
   z-index: -10;
 
   -webkit-transition: all 0.3s ease-in-out 0s;
@@ -276,6 +278,10 @@ footer.site-footer .copyright {
   max-width: 17%;
   max-height: 50px;
   padding: 0 5px;
+}
+
+.page-content .result-of-the-month img {
+  width: 100%;
 }
 
 /** Research **/
@@ -549,6 +555,10 @@ footer.site-footer .copyright {
     padding-top: 75px;
   }
 
+  .page-content .home {
+    margin-top: -25px;
+  }
+
   .page-content .wrapper .grants img {
     max-width: 15%;
     max-height: 65px;
@@ -635,6 +645,16 @@ footer.site-footer .copyright {
 
   .page-content .photo img {
     width: 70%;
+  }
+
+  .page-content .result-of-the-month {
+    display: flex;
+  }
+  .page-content .result-of-the-month div.image {
+    padding-right: 15px;
+  }
+  .page-content .result-of-the-month p {
+    margin-top: 0;
   }
 
   .page-content .wrapper .grants img {
