@@ -272,6 +272,10 @@ footer.site-footer .copyright {
   padding: 20px 0;
 }
 
+.page-content .home h2 {
+  text-align: center;
+}
+
 .page-content .wrapper .grants img {
   display: inline-block;
   vertical-align: middle;
@@ -282,6 +286,18 @@ footer.site-footer .copyright {
 
 .page-content .result-of-the-month img {
   width: 100%;
+}
+
+.collab-table {
+  margin: auto;
+  padding-left: 242.13px;
+}
+.collab-table td {
+  padding: 5px 15px;
+}
+.collab-table td.name {
+  text-align: right;
+  font-weight: bold;
 }
 
 /** Research **/
