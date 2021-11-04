@@ -290,7 +290,6 @@ footer.site-footer .copyright {
 
 .collab-table {
   margin: auto;
-  padding-left: 242.13px;
 }
 .collab-table td {
   padding: 5px 15px;
@@ -691,6 +690,12 @@ footer.site-footer .copyright {
     width: calc(100% - 40px);
   }
 
+}
+
+@media only screen and (min-width: 1000px) {
+  .collab-table {
+    padding-left: 242.13px;
+  }
 }
 
 @media only screen and (min-width: 1100px) {
