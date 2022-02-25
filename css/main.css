@@ -529,6 +529,7 @@ footer.site-footer .copyright {
 
 .announcements {
   text-align: center;
+  margin-top: 25px;
 }
 
 .positions-available {
@@ -579,6 +580,7 @@ footer.site-footer .copyright {
     max-height: 65px;
     padding: 0 10px;
   }
+
 }
 
 @media only screen and (min-width: 750px) {
@@ -688,6 +690,10 @@ footer.site-footer .copyright {
   }
   .page-content .resources .githubrepo .repo-cite {
     width: calc(100% - 40px);
+  }
+
+  .announcements {
+    margin-top: 0px;
   }
 
 }
