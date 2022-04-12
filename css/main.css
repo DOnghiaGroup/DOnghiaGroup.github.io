@@ -626,6 +626,20 @@ footer.site-footer .copyright {
     float: right;
   }
 
+  .page-content .section#aerospace .text, .page-content .section#aerospace .image {
+    float: none;
+    width: auto;
+  }
+
+  .page-content .section#aerospace .image {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .page-content .section#aerospace .image img {
+    width: 30%
+  }
+
   .page-content .wrapper.team .section .text {
     width: calc(75% - 20px);
   }
@@ -651,9 +665,9 @@ footer.site-footer .copyright {
 
 @media only screen and (min-width: 900px) {
   nav.site-nav ul.sub-nav {
-      margin: -75px calc(calc(100% - 825px) / 2);
-      padding: 15px 30px;
-      width: 765px;
+      margin: -75px calc(calc(100% - 810px) / 2);
+      padding: 15px 20px;
+      width: 790px;
   }
 
   nav.site-nav ul.sub-nav.team > li {
